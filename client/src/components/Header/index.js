@@ -2,8 +2,12 @@ import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 
 import './styles.css';
+import { firebaseApp } from 'services/firebase';
+import {getAuth, signOut} from "firebase/auth";
+const auth = getAuth(firebaseApp);
 
-export default function Header() {
+
+export default function Header( {click}) {
   return (
     <div className='header'>
       <div className='nav'>
@@ -17,7 +21,7 @@ export default function Header() {
         </nav>
       </div>
       <div className='sign-button'>
-      <Button color="secondary"  variant="outlined">Sign Out</Button>
+      <Button color="secondary"  variant="outlined" onClick={()=>signOut(auth)}>Sign Out</Button>
       </div>
     </div>
   );
