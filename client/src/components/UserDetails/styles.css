@@ -1,0 +1,16 @@
+.error {
+  font-size: 2rem;
+  text-align: center;
+  color: red;
+}
+
+.userDetails {
+  text-align: center;
+  padding-top: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.userDetails h3 {
+  font-size: 2rem;
+}

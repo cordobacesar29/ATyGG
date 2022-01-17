@@ -1,0 +1,54 @@
+.userItem {
+  display: block;
+  padding: 10px;
+  border: 1px solid #e9e9e9;
+}
+
+.userItem p {
+  max-width: 500px;
+  min-height: 30px;
+}
+
+.links {
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+
+.links button,
+.actions button {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 12px;
+  transition: background-color 0.2s ease;
+}
+
+.links button:hover,
+.actions button:hover {
+  background-color: #dddddd;
+}
+.links button:active,
+.actions button:active {
+  background-color: #e9e9e9;
+}
+
+.actions button {
+  margin-left: 10px;
+}
+
+.links svg,
+.actions svg {
+  font-size: 1.2rem;
+}
+
+.links a {
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (min-width: 700px) {
+  .postItem p {
+    min-height: 100px;
+  }
+}
