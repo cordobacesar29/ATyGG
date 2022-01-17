@@ -1,31 +1,40 @@
 import { Link } from 'react-router-dom';
 import { FaRegEdit } from 'react-icons/fa';
 import { AiOutlineDelete } from 'react-icons/ai';
-import { CgDetailsMore } from 'react-icons/cg';
-
-import './styles.css';
+import TableCell from '@mui/material/TableCell';
+import TableBody from '@mui/material/TableBody';
+import Button from '@mui/material/Button';
 
 export default function User({ handleDelete, user }) {
   return (
-    <div className='userItem'>
-      <p>{user.firstName}</p>
-      <section className='links'>
-        <Link to={`/${user.id}`}>
-          <button>
-            <CgDetailsMore />
-          </button>
+
+    <TableBody>
+      <TableCell><p>{user.firstName}</p></TableCell>
+      <TableCell><p>{user.lastName}</p></TableCell>
+      <TableCell><p>{user.age}</p></TableCell>
+      <TableCell><p>{user.email}</p></TableCell>
+      <TableCell>
+        <Link to={`/edit/${user.id}`}>
+          <Button 
+            className='button-edit'
+            color="info" 
+            variant="outlined" 
+            startIcon={<FaRegEdit />} 
+          >
+          Edit
+          </Button>
         </Link>
-        <div className='actions'>
-          <Link to={`/edit/${user.id}`}>
-            <button>
-              <FaRegEdit />
-            </button>
-          </Link>
-          <button onClick={() => handleDelete(user.id)}>
-            <AiOutlineDelete />
-          </button>
-        </div>
-      </section>
-    </div>
+      </TableCell>
+      <TableCell>
+        <Button 
+          color="error" 
+          variant="outlined" 
+          startIcon={<AiOutlineDelete />} 
+          onClick={() => handleDelete(user.id)} 
+        >
+        Delete
+        </Button>
+      </TableCell>
+    </TableBody>
   );
 }

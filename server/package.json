@@ -1,5 +1,5 @@
 {
-  "name": "wu-challenge-js-back-alkemy",
+  "name": "atygg",
   "version": "1.0.0",
   "description": "",
   "main": "src/server.js",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/emiperalta/wu-challenge-js-back-alkemy.git"
+    "url": "https://github.com/cordobacesar29/ATyGG"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/emiperalta/wu-challenge-js-back-alkemy/issues"
+    "url": "https://github.com/cordobacesar29/ATyGG"
   },
-  "homepage": "https://github.com/emiperalta/wu-challenge-js-back-alkemy#readme",
+  "homepage": "https://github.com/cordobacesar29/ATyGG",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
