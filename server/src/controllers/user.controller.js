@@ -1,3 +1,4 @@
+const bcrypt = require("bcryptjs"); 
 const { User } = require('../database');
 
 const getAll = async (req, res) => {
@@ -13,8 +14,10 @@ const getAll = async (req, res) => {
 };
 
 const addOne = async (req, res) => {
+  const {password} = req.body;
+  const hashedPassword = await bcrypt.hash(password, 8)
   try {
-    const user = await User.create({ ...req.body });
+    const user = await User.create({ ...req.body, password: hashedPassword });
     const newUser = await User.findOne({
       where: { id: user.id }
     });
