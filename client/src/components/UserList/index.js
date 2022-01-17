@@ -11,7 +11,13 @@ export default function Home() {
   const { deleteOneUser, users } = useUsers();
 
   const handleDelete = userId => {
-    deleteOneUser(userId);
+    const confirmDelete = () => {
+      const response = window.confirm("Are you sure ?");
+      if(response) {
+        deleteOneUser(userId);
+      }
+    }
+    confirmDelete();
   };
 
   return (
